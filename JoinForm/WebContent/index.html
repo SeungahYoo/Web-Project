@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body style="  max-width: 700px;
+ margin: auto;">
+<header>
+<center><font color="orange"><h1>Become a Member</h1></font></center>
+<hr style="border:solid 1px orange">
+</header>
+<form action ="member.jsp" method = "get" autocomplete="on">
+<section>
+<article>
+<fieldset>
+		<legend><font color="green"><b>Registration Information</b></font></legend>
+		<table align="center">
+			<tr>
+				<td align="right">
+				Email: 
+				</td>
+				<td>
+				<input type="email" name="email" size="30" required="required">
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+				Password: 
+				</td>
+				<td>
+				<input type="password" name="pw" size="30" placeholder="At least 6 letters of numbers" required="required">
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+				Verify Password: 
+				</td>
+				<td>
+				<input type="password" name="vpw" size="30" required="required">
+				</td>
+			</tr>
+		</table>
+	</fieldset>
+</article>
+
+<article>
+<fieldset>
+		<legend><font color="green"><b>Member Information</b></font></legend>
+<table align="center">
+			<tr>
+				<td align="right">
+				First Name: 
+				</td>
+				<td>
+				<input type="text" name="fname" size="30" required="required">
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+				Last Name: 
+				</td>
+				<td>
+				<input type="text" name="lname" size="30"  required="required" >
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+				Address: 
+				</td>
+				<td>
+				<input type="text" name="address" size="30">
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+				City: 
+				</td>
+				<td>
+				<input type="text" name="city" size="30"  required="required">
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+				State: 
+				</td>
+				<td>
+				<input type="text" name="state" size="30" placeholder="2-character code"  required="required">
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+				ZIP Code: 
+				</td>
+				<td>
+				<input type="text" name="address" size="30" placeholder="5 or 9 digits"  required="required">
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+				Phone Number: 
+				</td>
+				<td>
+				<input type="text" name="number" size="30" placeholder="999-999-9999">
+				</td>
+			</tr>
+		</table>
+	</fieldset>
+</article>
+
+<article>
+<fieldset>
+		<legend><font color="green"><b>Membership Information</b></font></legend>
+				<table align="center">
+			<tr>
+				<td align="right">
+				Membership Type: 
+				</td>
+				<td>
+			
+				<select style="width:233px" >
+				<optgroup label="type">
+					<option value=freshman>Freshman</option>
+					<option value=sophomore>Sophomore</option>
+					<option value=junior>Junior</option>
+					<option value=senior>Senior</option>
+				</optgroup>
+				</select>
+
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+				Starting Date: 
+				</td>
+				<td>
+				<input type="date" name="date" style="width:230px"  required="required">
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+				Tickets for Guest: 
+				</td>
+				<td>
+				<input type="number" name="guest" size="30" min="1" max="99" value="1" style="width:230px"> 
+				</td>
+			</tr>
+		</table>
+	</fieldset>
+</article>
+
+<article>
+	<fieldset>
+		<legend><font color="green"><b>Submit Your Membership</b></font></legend>
+			<div style="float: right">
+			<input type="submit" value="Submit" style="width:130px">
+			<input type="reset" value="Reset Fields" style="width:130px">
+			</div>
+	</fieldset>
+</article>
+</section>
+</form>
+</header>
+<footer>
+<hr style="border:solid 1px orange">
+<font size="2" style="float:right">ⓒ Copyright 2013 SCSA.</font>
+</footer>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+//closure : 사용범위가 끝난 데이터를 scope밖에서 사용 가능하게 해주는 기능. 
+//			함수를 리턴하면서 가능해짐.
+
+//result or return되는 익명 함수를 closure라고 지칭
+function test(num){
+	var result = ++num;
+	return function(){
+		alert(result);
+	}
+}
+
+var value = test(99);
+
+value();
+</script>
+</head>
+<body>
+
+</body>
+</html>

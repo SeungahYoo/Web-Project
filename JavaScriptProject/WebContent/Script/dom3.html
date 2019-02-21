@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style type="text/css">
+	#display{
+		width: 500px;
+		height: 300px;
+		border: 2px solid red;
+		overflow : auto; /*div 안의 내용물이 넘치면 스크롤바가 자동으로 생긴다*/
+	}
+</style>
+<script type="text/javascript">
+	var count = 1;
+	function create(){
+		//<h1>hello</h1> 생성해서 div의 자식으로 붙이기
+		var h1 = document.createElement("h1");
+		var txt = document.createTextNode("hello"+ count++);
+		h1.appendChild(txt);
+		
+		
+		var a = document.createElement("a");
+		a.setAttribute("href","#") //<a href=> </a>
+		h1.setAttribute('onclick','del(this)');
+		var comment = document.createTextNode("gogo");
+		a.appendChild(comment);
+		
+		var div = document.getElementById('display');
+		div.appendChild(h1);
+		div.appendChild(a);
+		
+	}
+	
+	function del(that){ //지우기 위해서는 부모를 알아야한다
+		
+		var p = that.parentNode;
+		p.removeChild(that);
+
+	}
+</script>
+</head>
+<body>
+<h1>dom create</h1>
+<input type="button" value="create" onclick="create()">
+<hr>
+<div id="display">
+</div>
+</body>
+</html>

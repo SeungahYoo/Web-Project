@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+#container{
+width: 600px;
+	height: 300px;
+	background-color: #ffffcc;
+	text-align:center;
+	vertical-align: middle;
+	line-height: 300px;
+}
+
+#box {
+	width:auto;
+	margin: 0 auto;
+}
+
+#number {
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 52px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: blue;
+	margin: 0 10px;
+	color: #ffffcc;
+}
+</style>
+<script type="text/javascript">
+	var count = 0;
+	function make() {
+		var box = document.getElementById('box');
+		var random = Math.floor(Math.random() * 45)+1;
+		var num = document.createElement('div');
+		num.setAttribute("id", 'number');
+		//num.setAttribute("style", "background-color:red;width:50px;height:50px;");
+
+		var txt = document.createTextNode(random);
+		count++;
+		console.log(count);
+		num.appendChild(txt);
+		box.appendChild(num);
+	}
+
+	startAlert = function() {
+		playAlert = setInterval(function() {
+			make();
+			if (count == 6)
+				stopAlert();
+		}, 1000);
+	};
+
+	stopAlert = function() {
+		clearInterval(playAlert);
+
+	};
+
+	startAlert();
+</script>
+</head>
+<body>
+	<h3>대박을 기원합니다~~</h3>
+	<div id=container>
+		<div id=box>
+			<!--  <button onclick="startAlert();">setInterval()</button>
+		<button onclick="stopAlert();">clearInterval()</button>
+	-->
+		</div>
+	</div>
+</body>
+</html>

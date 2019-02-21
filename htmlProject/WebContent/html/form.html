@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- form: 클라이언트에서 서버로 정보를 전송하는 태그 
+	 action: 서버쪽에서 정보를 받을 파일 이름
+	 method: 서버로 정보를 보내는 방식(get,post) 지정-->
+<h1> Form test</h1>
+	<form action ="welcome.jsp" method = "get" autocomplete="on">
+		num: <input type="text" name="num" placeholder="학번을 입력해 주세요" required="required"><br>
+		num: <input type="text" name="num" readonly="readonly"><br>
+		pass: <input type="password" name="pass"><br>
+		
+		<hr>
+		movie:<input type="checkbox" name="hobby">
+		game:<input type="checkbox" name="hobby">
+		trip:<input type="checkbox" name="hobby">
+		
+		<hr>
+		Spring:<input type="radio" name="season">
+		Summer:<input type="radio" name="season">
+		Autumn:<input type="radio" name="season">
+		Winter:<input type="radio" name="season">
+		
+		<hr>
+		upload: <input type="file" name="file1"> <br>
+		hidden value: <input type="hidden" name="hidden" value="999"><br>
+		
+		<textarea cols=30 rows="5" name="ta">hello...</textarea>
+		<br> 
+		
+		<select name = "car" >
+			<optgroup label = "mycar">
+			<option value = "one"> morning </option>
+			<option value = "two"> avante </option>
+			<option value = "three"> k5 </option>
+			<option value = "four"> m5 </option>
+			</optgroup>
+			
+			
+			
+		</select>
+		<br>
+		<input type="reset" value="취소">
+		<input type="submit" value="전송">
+	</form>
+</body>
+</html>

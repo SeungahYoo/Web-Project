@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style type="text/css">
+body {
+	background-color: #f2f2f2;
+}
+
+fieldset {
+	width: 500px;
+}
+
+.legend {
+	color: black;
+	font-weight: bold;
+}
+
+section {
+	padding: 7px 5px;
+}
+</style>
+</head>
+<body>
+	<header>
+		<h1>영화 예매</h1>
+	</header>
+	<section>
+		<h3>쿵푸팬더</h3>
+		<img src="./img/movie_image2.jpg" />
+	</section>
+	<section>
+		상영관 <select name="type" style="width: 150px;">
+			<optgroup label="theater">
+				<option value="one">CGV</option>
+				<option value="two">롯데시네마</option>
+				<option value="three">메가박스</option>
+				<option value="four">대한극장</option>
+			</optgroup>
+		</select> 날짜 선택 <input type="date" style="width: 150px;" required="required">
+	</section>
+	<section>
+		<fieldset>
+			<legend class="legend">시간 선택</legend>
+			<input type="radio"> 08:30 <input type="radio"> 11:00
+			<input type="radio"> 14:20 <input type="radio"> 17:25
+			<input type="radio"> 20:10 <input type="radio"> 23:05
+		</fieldset>
+	</section>
+	<section>
+		요금 <span style="text-decoration: line-through;">W9,000</span> <span
+			style="text-decoration: underline;">W5,000</span>
+	</section>
+	<section>
+		<section>
+			인원 <input type="number" min=1 style="width: 200px;"
+				required="required" placeholder="0">
+		</section>
+		<section>
+			금액 <input type="text" style="width: 200px;" required="required"
+				placeholder="0">
+		</section>
+	</section>
+
+	<section>
+		<input type="checkbox" name="option"> 옵션
+	</section>
+	<section>
+		<fieldset>
+			<input type="checkbox" name="popcorn"> 팝콘 <input
+				type="checkbox" name="coke"> 콜라
+		</fieldset>
+	</section>
+</body>
+</html>

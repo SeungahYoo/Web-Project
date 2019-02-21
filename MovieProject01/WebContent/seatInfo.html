@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+body {
+	background-color: #f2f2f2;
+}
+
+section {
+	width: 960px;
+	padding: 5px;
+	margin: 0 auto;
+}
+
+footer {
+	margin: 0 auto;
+}
+
+li {
+	font-size: 40px;
+	display: inline-block;
+	background-color: grey;
+	color: white;
+}
+
+a {
+	text-decoration: none;
+	padding:5px 7px;
+	color: aliceblue;
+}
+/* 마우스 오버(마우스 올렸을때) */
+a:hover {
+	background-color: black;
+}
+/* 마우스 클릭하고있을때 */
+a:active {
+	background-color: red;
+}
+/* 마우스 한번클릭후 */
+a:visited {
+	color: white;
+}
+
+p {
+	font-weight: bold;
+}
+</style>
+</head>
+<body>
+	<header>
+		<h1>[SSAFY CINEMA] 영화관별 좌석 정보</h1>
+		<hr style="border: solid 1px lightgray">
+	</header>
+
+
+	<p>영화관을 클릭하면 해당 관의 좌석 정보를 확인할 수 있습니다.</p>
+	<ul>
+		<li><a href="#foot1">1관</a></li>
+		<li><a href="#foot2">2관</a></li>
+		<li><a href="#foot3">3관</a></li>
+		<li><a href="#foot4">4관</a></li>
+		<li><a href="#foot5">5관</a></li>
+	</ul>
+
+	<hr style="border: solid 1px lightgray">
+	<section>
+		<br> <br> <br> <br> <br> <br>
+
+
+		<article>
+			<div id="foot1">
+				<p>[1관]</p>
+				<img src="./image/01.jpg"> <br> <br> <br>
+			</div>
+			<div id="foot2">
+				<p>[2관]</p>
+				<img src="./image/02.jpg"> <br> <br> <br>
+			</div>
+			<div id="foot3">
+				<p>[3관]</p>
+				<img src="./image/03.jpg"> <br> <br> <br>
+			</div>
+			<div id="foot4">
+				<p>[4관]</p>
+				<img src="./image/04.jpg"> <br> <br> <br>
+			</div>
+			<div id="foot5">
+				<p>[5관]</p>
+				<img src="./image/05.jpg"> <br> <br> <br>
+			</div>
+		</article>
+	</section>
+</body>
+</html>

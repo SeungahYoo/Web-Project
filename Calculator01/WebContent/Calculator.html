@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style type="text/css">
+#board {
+	width: 235px;
+	height: 220px;
+	border: 2px solid red;
+}
+
+#display {
+	width: 235px;
+	height: 30px;
+	border: 1px solid grey;
+	text-align: right;
+	
+}
+
+#box {
+	width: 50px;
+	height: 50px;
+	margin: 2px 2px;
+}
+</style>
+<script type="text/javascript">
+	var count = 1;
+	var digits = '';
+	var rst='';
+	function number(value) {
+
+		if (value == 'CE') {
+			digits = '';
+			print();
+		} else if (value == '=') {
+			rst=digits;
+			digits=eval(digits);
+			rst=rst+'='+digits;
+			print();
+			digits='';
+			addRst();
+		} else {
+			digits += value;
+			print();
+		}
+
+	}
+	function print(){
+		var display = document.getElementById("display");
+		display.innerHTML = digits;
+	}
+	function addRst(){
+		rst=(count++)+". "+rst
+		var a = document.createElement("p");
+		var comment = document.createTextNode(rst);
+		a.appendChild(comment);
+		
+		var div = document.getElementById('result');
+		div.appendChild(a);
+	}
+
+</script>
+</head>
+<body>
+	<h1>Caculator</h1>
+	<hr>
+	<div id="display">0.0</div>
+	<div id="board">
+		<input type="button" id="box" value="1" onclick="number(value)">
+		<input type="button" id="box" value="2" onclick="number(value)">
+		<input type="button" id="box" value="3" onclick="number(value)">
+		<input type="button" id="box" value="+" onclick="number(value)"><br>
+		<input type="button" id="box" value="4" onclick="number(value)">
+		<input type="button" id="box" value="5" onclick="number(value)">
+		<input type="button" id="box" value="6" onclick="number(value)">
+		<input type="button" id="box" value="-" onclick="number(value)"><br>
+		<input type="button" id="box" value="7" onclick="number(value)">
+		<input type="button" id="box" value="8" onclick="number(value)">
+		<input type="button" id="box" value="9" onclick="number(value)">
+		<input type="button" id="box" value="*" onclick="number(value)"><br>
+		<input type="button" id="box" value="0" onclick="number(value)">
+		<input type="button" id="box" value="CE" onclick="number(value)">
+		<input type="button" id="box" value="=" onclick="number(value)">
+		<input type="button" id="box" value="/" onclick="number(value)"><br>
+
+	</div>
+	<div id="result">
+	<h1>결과이력</h1>
+	</div>
+</body>
+</html>

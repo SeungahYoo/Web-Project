@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(':button').click(function(){
+			//ajax요청 보내기
+			$.ajax({
+				url:'paramTest.jsp',
+				success:function(result){
+					$('#display').html("<h1>"+result+"</h1>");
+				},
+				//서버로 보낼 데이터
+				data:{
+					id: $('#id').val(), //이름 : 값
+					pass: $('#pass').val()
+				}
+				
+			});
+			
+		})
+	})
+</script>
+</head>
+<body>
+<h1>ajax param test</h1>
+ID:<input type="text" id="id"><br>
+PW:<input type="password" id="pass"><br>
+<input type="button" value="로그인" onclick="process()">
+<hr>
+<div id="display"></div>
+</body>
+</html>

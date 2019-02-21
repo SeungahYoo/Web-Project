@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+//1. 선언적 함수; 함수 이름이 있음. 이름으로 호출
+	function go(num){ //함수 정의
+		alert(++num);
+	}
+	
+	go(4);
+	
+	function sum(a,b){
+		return a+b;
+	}
+	
+	function max(a,b){
+		return a>b? a:b;
+	}
+	
+	
+	function getArea(r){
+		alert(2*r*3.14);
+	}
+	
+	function loopString(str,n){
+		for (var i = 0; i < n; i++) {
+			document.write(str+"<br>");
+		}
+	}
+	
+	document.write(max(30,100)+"<br>");
+	getArea(2);
+	
+	loopString("SSAFY",3)
+</script>
+</head>
+<body>
+
+</body>
+</html>

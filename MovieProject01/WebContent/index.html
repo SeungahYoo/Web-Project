@@ -1,0 +1,365 @@
+
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>2단 레이아웃</title>
+<style>
+body {
+	background-color: #f2f2f2;
+}
+
+nav ul {
+	list-style: none;
+	background-color:black;
+	text-align: center;
+	margin:0;
+	padding:0;
+}
+
+ul>li {
+	display: inline-block;
+	padding: 10px 40px;;
+	margin: : 10px;
+
+
+}
+
+ul:after{
+	content: '';
+	clear:both;
+	display:block;
+}
+
+nav ul li :hover{
+	background-color:black ;
+
+}
+nav li a {
+	padding:5px 15px;
+	text-decoration: none;
+	color: grey;
+	background: black;
+	display:block;
+}
+
+nav li a:hover {
+	color: white;
+	background-color: #4d4d4d;
+}
+
+ul ul{
+	display:none;
+}
+
+ul li:hover ul {
+	display: block;
+	position: absolute;
+	z-index: 6;
+}
+
+ul li:hover li a:hover{
+color: white;
+	background-color: #4d4d4d;
+}
+
+li:hover li {
+	float: none;
+}
+
+#introText {
+	height: 200px;
+	background: linear-gradient(#bfe699, #406619);
+	border-radius: 20px;
+	position: relative;
+}
+
+#inner{
+	color: white;
+	padding-left: 50px;
+	padding-top: 10px;
+	position: absolute;
+	width:500px;
+}
+
+
+#introimg {
+	float:right;
+	height:inherit;
+	border-radius: 20px;
+	
+}
+
+
+#container {
+	width: 960px;
+	padding: 5px;
+	margin: 0 auto;
+
+}
+
+#header {
+	padding: 20px;
+	margin-bottom: 20px;
+}
+
+
+#movieInfo {
+	float: left;
+	width: 600px;
+	padding: 20px;
+	margin-bottom: 20px;
+	margin-right: 5px;
+}
+
+#contents {
+	float: left;
+	width: 300px;
+	height: 500px;
+	padding: 20px;
+	margin-bottom: 20px;
+	margin-right: 5px;
+}
+
+#sidebar {
+
+	float: right;
+	width: 220px;
+	height: 1500px;
+	padding: 20px;
+	margin-bottom: 20px;
+	background-color: silver;
+}
+#sidebar ul{
+	height:500px;
+	background-color: #b3b3b3;
+	border-radius: 20px;
+}
+#sidebar ul li {
+	list-style-type: none;
+}
+
+#sidebar ul li a {
+	text-decoration: none;
+	color: black;
+}
+
+#sidebar ul li a:hover {
+	color: silver;
+	background-color: black;
+
+	padding: 5px 10px;
+	
+}
+
+
+#movieInfo table{
+	color:grey;
+	font-style: italic;
+	
+	
+}
+
+
+
+#staff {
+	float: left;
+	width: 600px;
+	padding: 20px;
+	margin-bottom: 20px;
+	margin-right: 5px;
+}
+
+#staff a {
+	text-decoration: none;
+	color:black;
+	font-weight: bold;
+}
+
+#staff table tr{
+	padding-bottom: 100px;
+}
+
+footer {
+	clear: both;
+	width:100%;
+	bottom:0px;
+	padding: 20px;
+	background-color: black;
+
+}
+
+footer a{
+text-decoration: none;
+color:silver;
+}
+
+footer article{
+	color:white;
+	display: inline-block;
+	padding-right: 100px;
+}
+
+.footerContent {
+	clear:both;
+	width:1200px;
+	margin:0px auto;
+
+	padding:0;
+
+
+}
+</style>
+</head>
+<body>
+
+	<div id="header">
+		<h1>SSAFY 극장</h1>
+	</div>
+
+	<nav>
+		<ul>
+			<li><a href="#">영화</a>
+				<ul>
+					<li><a href="movieTime.html">상영작</a></li>
+					<li><a href="movieWill.html">예정작</a></li>
+				</ul></li>
+			
+			<li><a href="#">극장</a>
+			<ul>
+					<li><a href="theaterInfo.html">영화관소개</a></li>
+					<li><a href="seatInfo.html">관별 안내</a></li>
+				</ul></li>
+			
+			<li><a href="#">예매</a>
+			<ul>
+					<li><a href="timetable.html">상영시간표</a></li>
+					<li><a href="reservation.html">빠른예매</a></li>
+				</ul></li>
+			<li><a href="#">이벤트</a></li>
+			<li><a href="#"> <img src="./img/rss.png">&nbsp;상영영화소개.RSS</a></li>
+			
+		</ul>
+	</nav>
+	
+	<div id="container">
+		<div id="outer">
+			<div id="introText">
+								<img id="introimg" src="./img/movie_image.jpg" height="200px" />
+				<div id="inner">
+				<h2>무공해 힐링 시네마</h2>
+				무공해 힐링 시네마는 새로운 개념의 영화장르의 한가지를 말하는 것입니다. 지친 영혼을 위한 휴식을 주는 영화나, 마음을
+				정화시키고 치유하는 힘을 가진 영화들 ... .
+				</div>
+				
+			</div>
+			
+			
+		</div>
+		
+		
+		
+		<div id="movieInfo">
+			<h2>쿵 푸 팬 더</h2>
+			<table>
+				<tr>
+					<td>
+					<th>개 봉</th>
+					</td>
+					<td>&nbsp;&nbsp;2011. 5. 26</td>
+				</tr>
+				<tr>
+					<td>
+					<th>감 독</th>
+					</td>
+					<td>&nbsp;&nbsp;<a href="#">여 인 영</a></td>
+				</tr>
+				<tr>
+					<td>
+					<th>등 급</th>
+					</td>
+					<td>&nbsp;&nbsp;[국내] 전체 관람가</td>
+				</tr>
+			</table>
+		</div>
+		<div id="sidebar">
+			<h2>Movies</h2>
+			<ul>
+				<li><a href="movieNow.html">현재상영작</a></li>
+				<li><a href="movieWill.html">상영예정작</a></li>
+				<li><a href="#">영화뉴스</a></li>
+				<li><a href="#">테마뉴스</a></li>
+				<li><a href="#">예매순위</a></li>
+			</ul>
+		</div>
+		<div id="contents">
+			<mark>하.면.된.다 - 포.스.작.렬</mark>
+			<br> '평화의 계곡'에서 아버지의 국수 가게를 돕고 있는 팬더, 포. 아버지는 국수의 비법을 알려주어 가업을
+			잇게 하고 싶지만, 포의 관심사는 오로지 '쿵푸 마스터'. 가게 일은 뒷전으로 하고 쿵푸의 비법이 적힌 용문서의 전수자를
+			정하는 ‘무적의 5인방’ 대결을 보러 시합장을 찾은 포, <img src="./img/movie_image3.jpg"
+				width="300px" /> <br>
+		</div>
+		<div id="contents">
+			그런데 이게 웬일! 마을의 현인 우그웨이 대사부가 포를 용문서의 전수자로 점지하는 이변이 일어난다. 무적의 5인방은 물론
+			시푸 사부 역시 이 사태를 받아들이지 못하는 가운데, 용문서를 노리고 어둠의 감옥에서 탈출한 타이렁이 마을을 습격해오자 그를
+			막아야 하는 미션이 포에게 떨어지는데...포는 쿵푸마스터로 거듭날 수 있을까? 아니... 포가 쿵푸를 할 수는 있을까?똥배
+			안에 숨겨진 포스를 깨우기 위한 포의 도전이 시작된다!
+			<video controls="controls" width="300px">
+				<source src="./media/KungFuPanda_Sample.mp4" type="video/mp4" />
+			</video>
+		</div>
+
+
+		<div id="staff">
+			<hr>
+			<h4>배우/제작진</h4>
+			<article>
+				<table>
+					<tr>
+						<td width="400px"><a href="#">Jack Black</a><br> 팬더곰, 포
+							목소리 역</td>
+						<td><img src="./img/jack.jpg" /></td>
+					</tr>
+					<tr>
+						<td><a href="#">Jackie Chan</a><br> 원숭이, 몽키 목소리 역</td>
+						<td><img src="./img/jackie.jpg" /></td>
+					</tr>
+					<tr>
+						<td><a href="#">Angelina Jolie</a><br> 호랑이, 타이크리스 목소리 역</td>
+						<td><img src="./img/angelina.jpg" /></td>
+					</tr>
+
+
+				</table>
+		</div>
+
+		</div>
+	<footer>
+		<div class="footerContent">
+			<article>
+				<h2>About</h2>
+				서울 강남 역삼 멀티캠퍼스.<br> <a href="#">ssafy@ssafy.com</a>
+			</article>
+			<article>
+				<h2>개인 정보 취급 방침</h2>
+				<ul>
+					<li><a href="#">개요</a></li>
+					<li><a href="#">문의처</a></li>
+
+				</ul>
+			</article>
+			<article>
+				<h2>공지사항</h2>
+				<ul>
+					<li><a href="#">오시는 길</a></li>
+					<li><a href="#">오류시 문의사항</a></li>
+
+				</ul>
+			</article>
+		</div>
+
+	</footer>
+
+</body>
+</html>

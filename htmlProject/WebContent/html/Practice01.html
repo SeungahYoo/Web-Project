@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<header>
+<h2>프런트엔드 개발자 지원서</h2>
+HTML, CSS, Javascript에 대한 기술적 이해와 경험이 있는 분을 찾습니다.
+<hr>
+</header>
+
+<form action ="welcome.jsp" method = "get" autocomplete="on">
+<section>
+<article>
+	<h4>개인 정보</h4>
+	<ul>
+	<li>이름 <input type="text" name="name" placeholder="공백없이 입력해주세요" required="required"></li>
+	<li>연락처 <input type="text" name="number" ></li>
+	</ul>
+</article>
+<article>
+	<h4>지원 분야</h4>
+	<ul>
+	<li><input type="radio" name="field">웹 퍼블리싱</li>
+	<li><input type="radio" name="field">웹 애플리케이션 개발</li>
+	<li><input type="radio" name="field">개발 환경 개선</li>
+	</ul>
+</article>
+<article>
+	<h4>지원 동기</h4>
+	<textarea cols="60" rows="5" name="ta" placeholder="본사 지원 동기를 간략히 써주세요."></textarea>
+</article>
+
+
+	<input type="submit" value="접수하기">
+	<input type="reset" value="다시쓰기">
+</section>
+</form>
+</body>
+</html>

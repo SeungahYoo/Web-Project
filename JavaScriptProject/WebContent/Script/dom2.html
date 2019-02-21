@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function check() {
+		//화면상에서 id, pass입력칸 알아내기
+		var id = document.getElementById("id");
+		var pass = document.getElementById("pass");
+		
+		if (pass.value == ''){
+			alert('pw를 입력해 주세요');
+			return;
+		}
+		
+
+		if (pass.value.length<6 || pass.value.length>10){
+			alert('pw는 6~10');
+			pass.value='';
+			return;
+		}
+	
+		
+		var form = document.getElementById("f");
+		
+		form.submit(); //
+	}
+	
+	function IdCheck(){
+		var span = document.getElementById("msg");
+		var id = document.getElementById("id");
+		span.style.color = 'red';
+		if(id.value =='tommy'){
+		span.innerHTML=" 중복된 ID입니다";
+		} else {
+			span.innerHTML=" 사용가능한 ID입니다";
+		}
+	}
+</script>
+</head>
+<body>
+	<h1>회원가입</h1>
+	<form method="post" action="first.html" id="f">
+		ID : <input type="text" id="id" onblur="IdCheck()"><span id="msg"></span><br> 
+		PW : <input type="password" id="pass"><br> 
+
+		<input type="button" value="회원가입" onclick="check()">
+	</form>
+</body>
+</html>
